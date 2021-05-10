@@ -1,0 +1,36 @@
+package com.company;
+
+import java.util.Scanner;
+
+    //Write a program that reads a set of integers, and then prints the sum of the even and odd integers.
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        int inputNumber;
+        boolean selectedNumber;
+        int sumOfEven = 0;
+        int sumOfOdd = 0;
+        do
+        {
+            System.out.print("Input number  ");
+            inputNumber = scanner.nextInt();
+            if (inputNumber % 2 == 0)
+            {
+                sumOfEven += inputNumber;
+            }
+            else
+            {
+                sumOfOdd += inputNumber;
+            }
+            System.out.print("Do you want to continue (true or false)?  ");
+            selectedNumber = scanner.nextBoolean();
+        }
+        while (selectedNumber);
+
+        System.out.println("Sum of even integers = " + sumOfEven);
+        System.out.println("Sum of odd integers = " + sumOfOdd);
+    }
+}
